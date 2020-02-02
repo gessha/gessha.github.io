@@ -14,7 +14,7 @@ In the following sections we will:
 1. Explore how we can look at data through the lens of open set recognition
 2. List methods that try to solve the open-set problem
 
-## **How we see data through the lens of open set recognition**
+## How we see data through the lens of open set recognition
 Open set recognition can be categorized into 4 classes: known knowns (KKCs), known unknowns (KUCs), unknown known classes (UKCs), and unknown unknown classes (UUCs). 
 - known known classes (KKCs) are labeled images of classes which we want to recognize. An example set of classes is the Arabic digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  described in the introduction section. We have samples(images) for them and we have the semantic information about them - their labels.
 
