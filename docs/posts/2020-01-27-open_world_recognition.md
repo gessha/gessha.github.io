@@ -26,13 +26,13 @@ There are several topics related to Open Set Recognition (OSR) and they are eith
 
 ### Reformulations of OSR
 
-| ![Large-Scale Long-Tailed Recognition in an Open World](/images/open_long_tailed_datasets.png) |
+| ![Large-Scale Long-Tailed Recognition in an Open World](../images/open_long_tailed_datasets.png) |
 | :----------------------------------------------------------: |
 | *Fig. Imbalanced dataset in an open set formulation Image source: [Lie, 2019](https://arxiv.org/abs/1904.05160)* |
 
 **Open Long-Tailed Recognition** is a reformulation of Open Set Recognition where the authors of [Lie, 2019](https://arxiv.org/abs/1904.05160) dismiss the assumption that the dataset contains equal amounts of samples for each class and instead consider an imbalanced dataset. Some of the classes have thousands of samples, others have a more modest hundred samples and others have just a sample or two. Open Set models need to address class imbalance, few shot learning and open set recognition in a single model. 
 
-| ![Towards Open World Recognition](/images/open_world_recognition.png) |
+| ![Towards Open World Recognition](../images/open_world_recognition.png) |
 | :----------------------------------------------------------: |
 | *Fig.  Image source: [Bendale, 2015](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Bendale_Towards_Open_World_2015_CVPR_paper.pdf)* |
 

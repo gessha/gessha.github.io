@@ -6,13 +6,13 @@ Hello and welcome to my blog. This is not the first time I'm making one but I ho
 
 ## Recent motivation
 
-![tweet](/images/screenshot_11.png)
+![tweet](..//images/screenshot_11.png)
 
 One reason I decided to start blogging again is I saw [Jeremy Howard's](https://twitter.com/jeremyphoward/status/1218965132849496064?s=20)  where he showed a very easy way to start blogging. Last time I tried hosting my blog on GitHub Pages, it took me several hours to install and google through all the details and I was still not persistent enought to finish it due to a few fights with Ruby. Five minutes after reading Jeremy's post, I am writing this post which should be up by the end of the day. He and [Rachel Thomas]() from [fast.ai](https://www.fast.ai/) make a great case for blogging in their respective blogs. Rachel's post on why you should start blogging can be found [here](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045).
 
 Another reason for blogging is that it helps you clarify your thoughts and helps you learn writing and whatever you're writing about much better. I want to get better at what I am studying and practicing and this will be part of my path to profficiency. 
 
-![Who? Me?](/images/screenshot_5.png)
+![Who? Me?](../images/screenshot_5.png)
 
 Also you, the person reading this should start blogging! I want to read your blog! I want to know the cool things you are doing! Just like how Jeremy and Rachel and blogging about cool things, please start blogging! Read Jeremy's [tutorial](https://www.fast.ai/2020/01/16/fast_template/)
 
