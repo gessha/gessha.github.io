@@ -9,7 +9,15 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+          LOCALE: "en_US.UTF-8"
+
     steps:
+      - name: Set Locale
+        run: |
+          sudo locale-gen $LOCALE
+          sudo update-locale LANG=$LOCALE LC_ALL=$LOCALE
+      
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
         run: |
