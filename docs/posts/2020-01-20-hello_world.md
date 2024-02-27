@@ -1,7 +1,4 @@
-# Hello World (10)_final_final.backup
-
-1. TOC
-{:toc}
+# Hello World (10)\_final_final.backup
 
 ## Why blog again?
 

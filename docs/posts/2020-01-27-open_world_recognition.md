@@ -1,8 +1,5 @@
 # Open Set Recognition
 
-1. TOC
-{:toc}
-
 ## What is Open Set Recognition (OSR)
 
 Open Set Recognition is a topic in machine learning which aims to classify the known and recognize the unknown. The term "open set" refers to the way we want to look at the problem of classification. The set is “open” because we want to classify what we can amongst the closed set of classes that we have, but we want to classify samples from the open world -- therefore open set.
