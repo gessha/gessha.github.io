@@ -6,6 +6,10 @@ nav:
   - About: about.md
   - Blog: blog.md
 
+theme:
+  name: mkdocs
+  locale: en
+
 plugins:
   - blogging:
       dirs:
