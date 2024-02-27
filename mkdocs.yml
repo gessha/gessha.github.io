@@ -8,5 +8,5 @@ nav:
 
 plugins:
   - blogging:
-      dirs: # The directories to be included
+      dirs:
         - posts
