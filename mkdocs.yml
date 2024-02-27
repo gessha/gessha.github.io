@@ -1,1 +1,12 @@
-site_name: My Docs
+site_name: Georgi's site
+site_url: https://gessha.dev
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog: blog.md
+
+plugins:
+  - blogging:
+      dirs: # The directories to be included
+        - posts
