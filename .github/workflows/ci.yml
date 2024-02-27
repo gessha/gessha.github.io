@@ -4,13 +4,15 @@ on:
     branches:
       - master 
       - main
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-          LOCALE: "en_US.UTF-8"
+      LOCALE: "en_US.UTF-8"
 
     steps:
       - uses: actions/checkout@v4
