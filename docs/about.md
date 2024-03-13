@@ -1,7 +1,9 @@
 # About
 
-My name is Georgi Georgiev and I am a PhD student at Stony Brook University, studying Computer Vision. My current topics of interest are open-world recognition and related topics such as active learning, co-segmentation, incremental learning and scalable learning. 
+Hello there, my name is Georgi Georgiev and a computer vision researcher with background and experience in instance segmentation and unconstrained lip synchonization (lipsync). 
 
-In addition to computer vision, I am a YouTube/Twitch viewer, video game player, Ganondorf main, and many other things. I like reading from various media sources, such as books, manga/manhua/comics/webtoons/, Twitter, Reddit, and more. You will probably see many references to those interests in the blog and I apologize in advance. 
+I like solving problems with code, both through traditional programming as well as machine learning and AI techniques.
 
-I have cycled through various social media and I am currently most active on Twitter. You can [follow](https://twitter.com/mewopean) my rants and drivel (R&D) as well as some actual research talk. 
+Once upon a time, I tried the academic route but I realized it's not for me and I dropped out.
+
+In my spare time, I like consuming all kinds of media, including books, articles, manga, anime, among many others. 
