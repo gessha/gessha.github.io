@@ -3,14 +3,18 @@ site_url: https://gessha.dev
 
 nav:
   - Home: index.md
-  - About: index.md
+  - About: about.md
   - Now: now.md
   - Projects: projects.md
   - Blog: blog.md
 
+# theme:
+  # name: mkdocs
+  # locale: en
+
 theme:
-  name: mkdocs
-  locale: en
+  name: null
+  custom_dir: 'theme'
 
 plugins:
   - blogging:

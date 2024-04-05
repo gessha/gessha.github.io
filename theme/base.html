@@ -1,0 +1,89 @@
+<!--
+  This Basic theme serves as an example for how to create other
+  themes by demonstrating the features with minimal HTML and CSS.
+  Comments like this will be through the code to explain briefly
+  what each feature is and point you to the MkDocs documentation
+  to find out more.
+-->
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  <link rel="shortcut icon" href="{{ "img/favicon.ico"|url }}">
+  <link rel="stylesheet" href="{{ "css/theme.css"|url }}">
+
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script> -->
+
+  <script src="{{ "js/theme.js"|url }}"></script>
+
+  {% block extrahead %}
+  {% endblock %}
+
+
+  {% for script in config.extra_javascript %}
+    {{ script | script_tag }}
+  {% endfor %}
+
+</head>
+
+<body>
+
+  <div class="container" style="display: flex"></div>
+
+
+
+  {% if page.next_page or page.previous_page %}
+    <div class="container" style="display: flex; justify-content: space-between;">
+      
+      <div>
+        {% if page.previous_page %}
+        <a href="{{ page.previous_page.url|url }}" title="{{ page.previous_page.title }}">
+          <img src="{{ "img/prev.svg"|url }}" alt="previous page button image" height="18em">
+        </a>
+        {% else %}
+          <a href="" title="{{ page.previous_page.title }}">
+          <img src="{{ "img/prev.svg"|url }}" alt="previous page button image" height="18em">
+        </a>
+        {% endif %}
+      </div>
+
+      <div>
+        <nav>
+          {% for nav_item in nav %}
+            {% include "nav.html" %}
+          {% endfor %}
+        </nav>
+      </div>
+
+      <div>
+        {% if page.next_page %}
+          <a href="{{ page.next_page.url|url }}" title="{{ page.next_page.title }}"/>
+            <img src="{{ "img/next.svg"|url }}" alt="next page button image" height="18em">
+          </a>
+        {% else %}
+          <a href="" title="{{ page.next_page.title }}"/>
+            <img src="{{ "img/next.svg"|url }}" alt="next page button image" height="18em">
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+
+  {% block content %}
+    {{ page.content }}
+  {% endblock %}
+
+  <footer style="display: flex; flex-direction: column; align-items: center;">
+    <p> © 2024 Georgi Georgiev. </p>
+    <p> Stand clear of the closing doors, please. </p>
+  </footer>
+
+</body>
+</html>

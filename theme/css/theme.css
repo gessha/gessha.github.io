@@ -1,0 +1,25 @@
+body {
+/*    margin: 1em;*/
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.active a {
+    color: red;
+    font-weight: bold;
+}
+
+nav {
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
