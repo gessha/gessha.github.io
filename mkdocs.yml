@@ -19,4 +19,4 @@ plugins:
 
 markdown_extensions:
   - footnotes
-  - md4mathjax
+  # - md4mathjax
