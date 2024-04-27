@@ -1,3 +1,11 @@
+---
+title: Open Set Recognition
+summary: A brief intro into the theory of Open Set Recognition
+authors:
+    - Georgi Georgiev
+date: 2020-01-27
+---
+
 # Open Set Recognition
 
 ## What is Open Set Recognition (OSR)

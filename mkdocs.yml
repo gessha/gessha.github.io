@@ -8,10 +8,6 @@ nav:
   - Projects: projects.md
   - Blog: blog.md
 
-# theme:
-  # name: mkdocs
-  # locale: en
-
 theme:
   name: null
   custom_dir: 'theme'
@@ -20,3 +16,7 @@ plugins:
   - blogging:
       dirs:
         - posts
+
+markdown_extensions:
+  - footnotes
+  - md4mathjax
