@@ -3,8 +3,8 @@ site_url: https://gessha.dev
 
 nav:
   - Home: index.md
-  - About: about.md
-  - Now: now.md
+  # - About: about.md
+  # - Now: now.md
   - Projects: projects.md
   - Blog: blog.md
 
