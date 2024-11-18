@@ -5,8 +5,8 @@ nav:
   - Home: index.md
   # - About: about.md
   # - Now: now.md
-  - Projects: projects.md
   - Blog: blog.md
+  - Projects: projects.md
 
 theme:
   name: null
