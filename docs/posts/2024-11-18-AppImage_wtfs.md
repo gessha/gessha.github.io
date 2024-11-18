@@ -1,5 +1,5 @@
 ---
-title: "Why is AppImageDaemon not packaged with new system releases?"
+title: "appimaged, where were you all this time?"
 summary:
 authors:
     - Georgi Georgiev
@@ -8,7 +8,7 @@ created: 2024-11-18
 
 # appimaged, where were you all this time?
 
-**TLDR: There is a [deamon](https://github.com/probonopd/go-appimage) you can install that watches for new AppImage files in /bin and ~/Downloads and automatically installs them.**
+**TLDR: There is a daemon [appimaged](https://github.com/probonopd/go-appimage) you can install that watches for new AppImage files in /bin and ~/Downloads and automatically installs them.**
 
 I've been using Linux systems for a while now and honestly, I've never really cared about how applications enter my system as long as I don't have to work too hard for it. I just want to get my work done and I'm okay with any type of packaging system, be it deb packages, AppImages, or Flatpaks, whatever works, works. However, I get annoyed whenever I see ineffincies that could be solved with some small amount of effort. 
 
