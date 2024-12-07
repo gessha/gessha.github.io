@@ -62,6 +62,16 @@
         {% endif %}
       </div>
     </div>
+  {% else %}
+  <div class="container" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <nav>
+        {% for nav_item in nav %}
+          {% include "nav.html" %}
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
   {% endif %}
 
 
