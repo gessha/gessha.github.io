@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Open Set Recognition - Georgi's site</title>
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700" rel="stylesheet">
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script> -->
+
+  <script src="../../js/theme.js"></script>
+
+  
+  
+
+
+  
+
+</head>
+
+<body>
+
+  
+  <div class="container" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <nav>
+        
+          
+<li>
+    <a href="../..">Home</a>    
+</li>
+
+
+        
+          
+<li>
+    <a href="../../blog/">Blog</a>    
+</li>
+
+
+        
+          
+<li>
+    <a href="../../projects/">Projects</a>    
+</li>
+
+
+        
+      </nav>
+    </div>
+  </div>
+  
+
+
+  
+    <h1 id="open-set-recognition">Open Set Recognition</h1>
+<h2 id="what-is-open-set-recognition-osr">What is Open Set Recognition (OSR)</h2>
+<p>Open Set Recognition is a topic in machine learning which aims to classify the known and recognize the unknown. The term "open set" refers to the way we want to look at the problem of classification. The set is “open” because we want to classify what we can amongst the closed set of classes that we have, but we want to classify samples from the open world -- therefore open set.</p>
+<p>To give a concrete example, imagine we have a classifier that recognizes the <strong>Arabic</strong> digits of 0 through 9. We give that classifier a <strong>Roman</strong> digit V which stands for 5. What does the model predict? The model predicts a 1, a 7 or even an 8, which is not exactly what we want from the model. Therefore, we would prefer <em>no prediction</em> as opposed to the  prediction of 1, 7 or 8. </p>
+<p>In the following sections we will:</p>
+<ol>
+<li>Explore how we can look at data through the lens of open set recognition</li>
+<li>List methods that try to solve the open-set problem</li>
+</ol>
+<h2 id="how-we-see-data-through-the-lens-of-open-set-recognition">How we see data through the lens of open set recognition</h2>
+<p>Open set recognition can be categorized into 4 classes: known knowns (KKCs), known unknowns (KUCs), unknown known classes (UKCs), and unknown unknown classes (UUCs). 
+- known known classes (KKCs) are labeled images of classes which we want to recognize. An example set of classes is the Arabic digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  described in the introduction section. We have samples(images) for them and we have the semantic information about them - their labels.</p>
+<ul>
+<li>
+<p>known unknown classes (KUCs) are unlabeled images that do not belong to any of the classes that we want to recognize. For example, unlabeled images of the Roman numbers (I, II, III, IV, V, VI, VII, VIII, IX) are KUCs under this classification. We have the images but we don't know what they mean. An expert needs to sit down and label them.</p>
+</li>
+<li>
+<p>unknown known classes (UKCs) are classes that we have no samples of but know that exist through side information. Examples of UKCs are Sumerian, Mayan and Chinese numbers. We know these exist, but we might not have any images of them.</p>
+</li>
+<li>
+<p>unknown unknown classes (UUCs) are classes that we have no samples of and we don't know that exist. In the hypothetical case where we encounter alien species, they might have their own number systems. If we run examples of their numbers through our model, we would like to classify them as unknown. However, since we don't even know about these number systems, we foresee how the numbers will look like.</p>
+</li>
+</ul>
+<h2 id="related-topics">Related topics</h2>
+<p>There are several topics related to Open Set Recognition (OSR) and they are either (1) more general formulations of OSR or (2) topics related to post-processing the results of (OSR). The former includes Open World Recognition and Open Long-Tailed recognition, which… . In addition, we have outlier detection and novelty detection which are old topics related to the OSR. The later category which aims to post-process the results from OSR contains incremental learning, scalable learning, active learning and co-segmentation. </p>
+<h3 id="reformulations-of-osr">Reformulations of OSR</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Large-Scale Long-Tailed Recognition in an Open World" src="../../images/open_long_tailed_datasets.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. Imbalanced dataset in an open set formulation Image source: <a href="https://arxiv.org/abs/1904.05160">Lie, 2019</a></em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Open Long-Tailed Recognition</strong> is a reformulation of Open Set Recognition where the authors of <a href="https://arxiv.org/abs/1904.05160">Lie, 2019</a> dismiss the assumption that the dataset contains equal amounts of samples for each class and instead consider an imbalanced dataset. Some of the classes have thousands of samples, others have a more modest hundred samples and others have just a sample or two. Open Set models need to address class imbalance, few shot learning and open set recognition in a single model. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Towards Open World Recognition" src="../../images/open_world_recognition.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig.  Image source: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Bendale_Towards_Open_World_2015_CVPR_paper.pdf">Bendale, 2015</a></em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Open World Recognition</strong> is a generalization of Open Set Recognition where the authors of <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Bendale_Towards_Open_World_2015_CVPR_paper.pdf"><em>Bendale, 2015</em></a> argue that Open Set models need to handle the unknown class detections and incorporate them into the dataset after labeling. </p>
+<p><strong>Outlier detection</strong> and <strong>Novelty detection</strong> are two well-studied topics which are considered tangential to Open Set Recognition. Outlier detection assumes that a dataset contains data which belongs to the distribution (inliers) and data which does not belong to the distribution (outliers), and tries to find the outliers within the dataset. Novelty detection assumes the training dataset is clean and tries to find new data which does not belong to the data distribution.</p>
+<h3 id="post-processing-of-osr-results">Post-processing of OSR results</h3>
+<p><strong>Incremental learning</strong> is a topic in machine learning which dismisses the assumption that all data is known before training and aims to learn from new data as it comes. It is relevant to Open Set Recognition because we would like to adapt to changes in the data distribution as well as learn from newly labeled classes. </p>
+<p><strong>Scalable learning</strong> aims to prepare models for inference at scale including techniques like compressing models, speeding up models, distributing models, and others. It also aims to scale models in terms of number of class predictions it can produce. It is relevant to Open Set Recognition because after a sample get classified as unknown, we would like to learn what it is through labeling and incorporate it as a new class.</p>
+<p><strong>Active learning</strong> makes labeling less expensive by measuring how confident a model is on unlabeled data and finding which data to label first. This way, the data labeling process maximizes model confidence on a diverse set of new data. It is relevant to Open Set Recognition because we would like to include all the samples that classified as unknown and label them in the most efficient method possible. </p>
+<p><strong>Co-segmentation</strong> aims to segment images whose image-level label is known but segmentation is unknown. For example, we download 100 images of chickens and we would like to segment them from the rest of the image so we can train a segmentation model to recognize chickens. We know what the image-level label of the images is, which is chicken, and we get the segmentations from the co-segmentation model. It is relevant to Open Set Recognition because in the context of object recognition and detection, we need at least bounding boxes to train a model and we can get them using co-segmentation.</p>
+<h2 id="methods-for-open-set-recognition">Methods for Open Set Recognition</h2>
+<p>The methods which address Open Set Recognition are too many to write about in a single blog post, and I think literature surveys have already done that, such as this <a href="https://arxiv.org/abs/1811.08581">Recent Advances in Open Set Recognition: A Survey</a>. Another resource is the GitHub repo by one of the authors of the survey above, listing a majority of the Open Set Recognition papers: <a href="https://github.com/iCGY96/awesome_OpenSetRecognition_list">Awesome Open Set Recognition list</a>. In this section I will briefly list and describe some of the methods.</p>
+<h3 id="discriminative-models">Discriminative models</h3>
+<h4 id="traditional-ml">Traditional ML</h4>
+<p>Traditional ML methods adapted to Open Set Recognition change the assumption of the models from closed-set to open-set. The methods include SVMs like <strong>1-vs-Set classifier</strong> and the <strong>Best Fitting Hyperplane Classifier</strong> which add hyperplanes or constraints to enable open set recognition. The model additions aim to separate the hyperplane learned from the training data from the rest of the space. Another set of methods such as the <strong>Weibull-SVM</strong> use a branch of statistics called <a href="https://en.wikipedia.org/wiki/Extreme_value_theory">Extreme Value Theory</a> to calibrate the threshold which is used to reject unknown images. </p>
+<p>Lesser known methods include <strong>Sparse Representation-based Classifier</strong> which tries to find the most sparse representation of the testing sample with respect to the training samples, distance-based models such nearest-neighbor, and margin distribution based methods like <strong>Extreme Value Machine</strong> which appropriately modifies to handle open-set recognition task. </p>
+<h4 id="deep-neural-networks">Deep Neural networks</h4>
+<p>Neural network based models focus primarily on modifying the activations from last layer of the neural network.</p>
+<ul>
+<li><strong>OpenMax</strong> is a layer which substitutes SoftMax in the last layer of a neural network and computes activations for unknown unknown classes (UUCs). The UUC activations are then used to compute the known known class probabilities (KKCs) using SoftMax. </li>
+<li><strong>Deep Open Classifier</strong> (DOC) replaces SoftMax with a 1-vs-rest layer of sigmoids. </li>
+<li><strong>Competitive Overcomplete Output Layer</strong> (COOL) is another final layer which introduces multiple output neurons for each class. If any of the corresponding units for a class activate, the layer predicts the class. <strong>tWiSARD</strong> is a classification framework which uses a weightless neural network and a distance-like metric to predict in an open set task. </li>
+<li><strong>CROSR</strong> and <strong>C2AE</strong> use representations learned from reconstruction to predict the open set task. </li>
+</ul>
+<h3 id="generative-models">Generative models</h3>
+<p>Based on the recent popularity of adversarial learning methods in the context of generative models, there are some works which propose generative variants of open set approaches such as <strong>G-OpenMax</strong> and <strong>OSRCI</strong>. <strong>G-OpenMax</strong> uses a conditional generative adversarial network (cGAN) to generate unknown unknown class (UUC) samples. <strong>Open Set Recognition Counterfactual Image generation (OSRCI)</strong> also uses a GAN to generative UUC samples but it generates them close to the known known classes in order to differentiate them in the classification part of their model. </p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Huge thanks to <a href="https://twitter.com/cac317">Casey Ching</a> for proof-reading this article. </p>
+<h2 id="further-readings">Further readings</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1811.08581">Recent Advances in Open Set Recognition: A Survey</a></li>
+<li><a href="https://github.com/iCGY96/awesome_OpenSetRecognition_list">Awesome Open Set Recognition list</a></li>
+</ul>
+  
+
+  <footer style="display: flex; flex-direction: column; align-items: center;">
+    <p> © 2024 Georgi Georgiev. </p>
+    <p> Stand clear of the closing doors, please. </p>
+  </footer>
+
+</body>
+</html>
